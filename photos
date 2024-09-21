@@ -1,7 +1,6 @@
 <div class="slideshow-container">
-    <!-- Slides -->
     <div class="slides">
-        <img src="photos/foto11.jpg" alt="Image 1"> <!-- Keep this as it is -->
+        <img src="photos/foto11.jpg" alt="Image 1">
     </div>
     <div class="slides">
         <img src="photos/foto1.jpg" alt="Image 2">

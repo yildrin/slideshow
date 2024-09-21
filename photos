@@ -4,19 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slideshow</title>
+    <style>
+        /* Your CSS styles */
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .slideshow-container { position: relative; max-width: 100%; margin: auto; }
+        .slides { display: none; width: 100%; }
+        img { width: 100%; border-radius: 10px; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+    </style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="slides">
-            <img src="photos/image1.jpg" alt="Image 1">
-        </div>
-        <div class="slides">
-            <img src="photos/image2.jpg" alt="Image 2">
-        </div>
-        <div class="slides">
-            <img src="photos/image3.jpg" alt="Image 3">
-        </div>
-        <!-- Add your navigation buttons here -->
+
+<div class="slideshow-container">
+    <!-- Slides -->
+    <div class="slides">
+        <img src="photos/image1.jpg" alt="Image 1">
     </div>
+    <div class="slides">
+        <img src="photos/image2.jpg" alt="Image 2">
+    </div>
+    <div class="slides">
+        <img src="photos/image3.jpg" alt="Image 3">
+    </div>
+    <div class="slides">
+        <img src="photos/image4.jpg" alt="Image 4">
+    </div>
+    <div class="slides">
+        <img src="photos/image5.jpg" alt="Image 5">
+    </div>
+    <div class="slides">
+        <img src="photos/image6.jpg" alt="Image 6">
+    </div>
+    <div class="slides">
+        <img src="photos/image7.jpg" alt="Image 7">
+    </div>
+    <div class="slides">
+        <img src="photos/image8.jpg" alt="Image 8">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094; Indietro</a>
+    <a class="next" onclick="changeSlide(1)">Avanti &#10095;</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        slides[slideIndex].style.display = "block";
+    }
+</script>
+
 </body>
 </html>

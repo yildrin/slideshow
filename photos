@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Image Slideshow</title>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="photos/image1.jpg" alt="Image 1">
+        </div>
+        <div class="slides">
+            <img src="photos/image2.jpg" alt="Image 2">
+        </div>
+        <div class="slides">
+            <img src="photos/image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add your navigation buttons here -->
+    </div>
 </body>
 </html>
